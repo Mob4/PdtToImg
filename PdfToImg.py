@@ -10,7 +10,7 @@ from wand.image import Image
 
 
  
-with Image(filename='source.pdf',resolution=200) as img:
+with Image(filename='source.pdf',resolution=100) as img:
         print('pages = ', len(img.sequence))
         img.compression_quality = 99
         with img.convert('png') as converted:
