@@ -9,9 +9,8 @@ from __future__ import print_function
 from wand.image import Image
 
 
- 
-with Image(filename='source.pdf',resolution=100) as img:
+with Image(filename='source.pdf') as img:
         print('pages = ', len(img.sequence))
-        img.compression_quality = 99
+        #img.compression_quality =50
         with img.convert('png') as converted:
             converted.save(filename='result/page_n.png')
